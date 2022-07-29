@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Machine Learning  Linear Regression Deployment</title>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+<style><!DOCTYPE html>
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+<body>
+      
+<div class="" style="background-color:orange" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+<center><p style="font-size:40px;color:red;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
+<center><p style="font-size:30px;color:red;margin-top:10px;">Department of Computer Engineering</p></center> 
+<center><p style="font-size:25px;color:red;margin-top:10px;">Summer Internship 2022 on Machine learning and Data Science</p></center> 
+</div>
+
+<div class="login">
+<h2 >Regression Analysis to predict Price on Basis of requirements</h2>
+<h4>Developed by Mohit Pawar</h4>
+<!-- Main Input For Receiving Query to our ML -->
+
+<form action="{{ url_for('predict')}}"method="get">
+<div class="form-floating mb-3">
+
+<div>
+<input type="number" class="form-control" id="exp1" name="exp1" step="any" min="0" max="10000" placeholder="Enter Area of the house required" required="required">
+<br>
+</div>
+
+<div>
+  <label for="BedRooms">Choose the number of BedRooms:</label>
+  <select name="exp2" id="exp2">
+    <option>select</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+  <br>
+  <br>
+</div>
+
+<div>
+  <label for="Bathrooms">Choose the number of Bathrooms:</label>
+  <select name="exp3" id="exp3">
+  <option>select</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+  <br><br>
+</div>
+
+<div>
+  <label for="Offers">Choose the Offers you want:</label>
+  <select name="exp4" id="exp4">
+  <option>select</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+  </select>
+  <br><br>
+</div>
+
+<div>
+  <label for="Brick">Choose the type of house-build:</label>
+  <select name="exp5" id="exp5">
+  <option>select</option>
+    <option value="1">Brick</option>
+    <option value="0">No Brick</option>
+    </select>
+    <br><br>
+</div>
+
+<div>
+  <label for="Neighbour">Choose the Neighbourhood:</label>
+  <select name="exp6" id="exp6">
+  <option>select</option>
+    <option value="0">EAST</option>
+    <option value="1">NORTH</option>
+    <option value="2">WEST</option>
+  </select>
+  <br><br>
+</div>
+
+</div>
+
+<br>
+<br>
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict Price of the house on above basis</button>
+</form>
+<br>
+<br>
+{{ prediction_text }}
+</div>
+
+<div class="" style="background-color:orange" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Experiment Performed in Summer internship 2022 from 27 June to 8 August </p></center> 
+</div>
+</div>
+</div>
+</body>
+</html>
+
